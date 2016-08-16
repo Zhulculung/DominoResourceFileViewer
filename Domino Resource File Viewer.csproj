@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C11D346F-1EB6-4A25-9ECE-1AA17842B81A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DominoResourceFileViewer</RootNamespace>
+    <AssemblyName>Domino Resource File Viewer</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Displayers\dispBinaryHex.cs" />
+    <Compile Include="Displayers\dispI8080Disassembler.cs" />
+    <Compile Include="Displayers\dispJavaDisassembler.cs" />
+    <Compile Include="Displayers\dispM6502Disassembler.cs" />
+    <Compile Include="Displayers\dispZ80Disassembler.cs" />
+    <Compile Include="Displayers\IBinaryViewer.cs" />
+    <Compile Include="Forms\frmBinary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBinary.designer.cs">
+      <DependentUpon>frmBinary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBitmap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBitmap.Designer.cs">
+      <DependentUpon>frmBitmap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFont.Designer.cs">
+      <DependentUpon>frmFont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHeader.Designer.cs">
+      <DependentUpon>frmHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmJava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmJava.Designer.cs">
+      <DependentUpon>frmJava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmString.Designer.cs">
+      <DependentUpon>frmString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnknown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnknown.Designer.cs">
+      <DependentUpon>frmUnknown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWave.designer.cs">
+      <DependentUpon>frmWave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceObjects\chkBinary.cs" />
+    <Compile Include="ResourceObjects\chkBitmap.cs" />
+    <Compile Include="ResourceObjects\chkCDecl.cs" />
+    <Compile Include="ResourceObjects\chkChunkBase.cs" />
+    <Compile Include="ResourceObjects\chkFont.cs" />
+    <Compile Include="ResourceObjects\chkHeader.cs" />
+    <Compile Include="ResourceObjects\chkJava.cs" />
+    <Compile Include="ResourceObjects\chkString.cs" />
+    <Compile Include="ResourceObjects\chkUnknown.cs" />
+    <Compile Include="ResourceObjects\chkWave.cs" />
+    <Compile Include="ResourceObjects\fileResourceLoader.cs" />
+    <EmbeddedResource Include="Forms\frmBinary.resx">
+      <DependentUpon>frmBinary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBitmap.resx">
+      <DependentUpon>frmBitmap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFont.resx">
+      <DependentUpon>frmFont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHeader.resx">
+      <DependentUpon>frmHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmJava.resx">
+      <DependentUpon>frmJava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmString.resx">
+      <DependentUpon>frmString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUnknown.resx">
+      <DependentUpon>frmUnknown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWave.resx">
+      <DependentUpon>frmWave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Binary.ico" />
+    <EmbeddedResource Include="Resources\Bitmap.ico" />
+    <EmbeddedResource Include="Resources\Domino.ico" />
+    <EmbeddedResource Include="Resources\java.ico" />
+    <EmbeddedResource Include="Resources\String.ico" />
+    <EmbeddedResource Include="Resources\Unknown.ico" />
+    <EmbeddedResource Include="Resources\Wave.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Play.ico" />
+    <EmbeddedResource Include="Resources\Stop.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
